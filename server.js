@@ -33,9 +33,9 @@ res.json({"message" : "Welcome to EasyNotes application. Take notes quickly. Org
 app.options('*', cors());
 require('./app/routes/note.routes.js')(app);
 
-app.listen(3000,() => {
+// app.listen(3000,() => {
 
-    console.log("Server is listening on port 3000");
+//     console.log("Server is listening on port 3000");
     
-})
+// })
 
