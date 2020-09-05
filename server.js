@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const cors = require('cors');
+var port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -33,9 +34,9 @@ res.json({"message" : "Welcome to EasyNotes application. Take notes quickly. Org
 app.options('*', cors());
 require('./app/routes/note.routes.js')(app);
 
-// app.listen(3000,() => {
+app.listen(port,() => {
 
-//     console.log("Server is listening on port 3000");
+    console.log("Server is listening on port 3000");
     
-// })
+})
 
