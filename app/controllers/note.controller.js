@@ -21,7 +21,9 @@ exports.create = (req, res) => {
 
         title: req.body.title || "Untitled Note",
 
-        content: req.body.content
+        content: req.body.content,
+
+        writeConcern : {w : "majority" , wtimout: 5000}
 
     });
 
